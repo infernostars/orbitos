@@ -1,4 +1,4 @@
-use bootloader_api::info::{FrameBuffer, FrameBufferInfo};
+use bootloader_api::info::FrameBufferInfo;
 use embedded_graphics::draw_target::DrawTarget;
 use embedded_graphics::Drawable;
 use embedded_graphics::geometry::Point;
@@ -7,8 +7,9 @@ use embedded_graphics::mono_font::MonoTextStyle;
 use embedded_graphics::pixelcolor::{Rgb888, RgbColor};
 use embedded_graphics::primitives::{Circle, PrimitiveStyle, StyledDrawable};
 use embedded_graphics::text::Text;
-use crate::{framebuffer, infallible};
+
 use crate::framebuffer::Display;
+use crate::infallible;
 
 pub fn init(framebufferinfo: FrameBufferInfo, display: Display){
     let height = framebufferinfo.height;

@@ -11,3 +11,17 @@ bench = false
 [dependencies]
 bootloader_api = "0.11.7"
 embedded-graphics = "0.8.1"
+spinning_top = "0.3.0"
+conquer-once = { version = "0.3.2", default-features = false }
+log = "0.4.17"
+
+[dependencies.noto-sans-mono-bitmap]
+version = "0.2.0"
+default-features = false
+features = [
+    "regular",
+    "size_16",
+    "unicode-basic-latin",
+    # required for the fallback char '�'
+    "unicode-specials",
+]
